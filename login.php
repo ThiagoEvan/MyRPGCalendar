@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrar no MyRPGCalendar</title>
-    <link rel="stylesheet" href="login.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./css/login.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <div class="container">
-        <form action="" class="Login">
+        <form action="" class="login-box">
             <label for="userlog" class="lblLogin">Digite o seu usuário</label>
             <input type="text" name="userlog" class="input">
             <label for="userlog" class="lblSenha">Digite a sua senha</label>

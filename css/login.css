@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 50vh;
+    top: 45%;
+    margin: auto;
+    
+}
+
+.login-box{
+    align-content: center;
+}
+
+label{
+    text-align: center;
+}
+
+label, input{
+    display: block;
+    margin: auto;
+}
