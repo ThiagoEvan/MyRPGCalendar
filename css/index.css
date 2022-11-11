@@ -1,10 +1,24 @@
+/*Remover*/
+body {
+    background-color: cornsilk;
+}
+
 #container {
     display: grid;
     gap: 10px;
+
+    position:relative;
 }
 
 header {
     display: flex;
+
+    position:absolute;
+    width: 100%;
+    height: 50px;
+}
+section {
+    left: 240px;
 }
 main {
     display: flex;
@@ -14,13 +28,21 @@ main {
 #calendar {
     display: flex;  
     flex-direction: column;
-    max-width: 1200px;
-    min-width: 400px;
-    width: 1200px;
+    align-content: flex-end;
+    
+    position:absolute;
+    width: 85%;
     height: 800px;
+    top: 50px;
+    left: 200px;
     
     border: 1px solid red;
 }
+
+#calendar > #mes {
+    text-align: center;
+}
+
 #calendar > #dias, #semana{
     display: grid;
     grid-template-columns: repeat(7,1fr);
