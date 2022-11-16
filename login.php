@@ -12,7 +12,7 @@
         <form action="" class="login-box">
             <label for="userlog" class="lblLogin">Digite o seu usuário</label>
             <input type="text" name="userlog" class="input">
-            <label for="userlog" class="lblSenha">Digite a sua senha</label>
+            <label for="userlog" class="lblLogin">Digite a sua senha</label>
             <input type="text" name="senhalog" class="input">
             <button type="submit" class="botao" id="botaoregis">Entrar</button>
         </form>
