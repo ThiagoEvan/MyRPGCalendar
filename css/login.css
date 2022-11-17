@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+}
+
+body{
+    background: #6d00ab;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .container{
@@ -11,12 +19,17 @@
     justify-content: center;
     align-items: center;
     width: 50vh;
-    top: 40vh;
+    top: 33vh;
     margin: auto;
     
 }
 
 .login-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     align-content: center;
 }
 
@@ -31,5 +44,73 @@ label, input{
 
 .lblLogin{
     margin: 10px 0px;
+    font-size: 1.6em;
+    font-family: 'Sono', sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: #e3e3e3;
+}
+
+.input{
+    background-color: #00000000;
+    color: #FFFFFF;
+    border: solid 0px #FFFFFF;
+    border-bottom: solid 1px #FFFFFF;
+    margin: 10px 0px;
+    padding: 0px 5px;
     font-size: 1.5rem;
+    width: 85%;
+    height: 32px;
+    font-family: 'Sono', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.input::placeholder{
+    color: #f5f5f5;
+}
+
+.botaodiv{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao{
+    align-self: center;
+    width: 150px;
+    height: 40px;
+    font-size: 1.3rem;
+    font-family: 'Sono', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    background-color: #00000000;
+    border: solid #FFFFFF 1px;
+    color: #FFFFFF;
+    transition-duration: .5s;
+}
+
+.botao:hover{
+    letter-spacing: 2px;
+    background-color: #FFFFFF;
+    color: #6d00ab;
+    font-weight: 300;
+}
+
+.registro{
+    margin-top: 15px;
+}
+
+.texto_tag{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Sono', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
 }

@@ -13,11 +13,14 @@
             <label for="userlog" class="lblLogin">Digite o seu usuário</label>
             <input type="text" name="userlog" class="input">
             <label for="userlog" class="lblLogin">Digite a sua senha</label>
-            <input type="text" name="senhalog" class="input">
-            <button type="submit" class="botao" id="botaoregis">Entrar</button>
+            <input type="password" name="senhalog" class="input">
+            <div class="botaodiv">
+                <button type="submit" class="botao" id="botaoregis">Entrar</button>
+            </div>
         </form>
         <div class="registro">
-            <p class="texto" id="a">Não tem conta?</p>
+            
+            <a class="texto_tag" id="a" href="">Não tem conta?</a>
         </div>
     </div>
 </body>
