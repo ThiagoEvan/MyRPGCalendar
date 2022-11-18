@@ -1,12 +1,23 @@
 var calendarDays = document.getElementById("dias")
 var calendarMonth = document.getElementById("mes")
-var data = new Date()
-var dayNow = data.getDate()
+var d = new Date()
+var full_year = d.getFullYear()
+var month = d.getMonth() + 1
+var date = new Date(`${full_year} ${month} 01`)
+var dayNow = date.getDate()
 limite = 31
 
 meses = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-let mes = meses[data.getMonth()]
+let mes = meses[d.getMonth()]
 
+//Verificar o dia que começas
+week = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"] //Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sabado
+let w = date.toDateString().slice(0,3)
+for(let i = 0; i <= week.length - 1; i++){
+    if (w == week[i]) {
+        console.log(`O 1° dia do mês começa em ${w}`)
+    }
+}
 //Verificar qual o Mês e mudar o limite de dias
 mesesL = ["January","April","June","September","November"]
 for(let i = 0; i <= mesesL.length - 1; i++){
