@@ -1,6 +1,6 @@
 /*Remover*/
 body {
-    background-color: cornsilk;
+    background-color: white;
 }
 
 #container {
@@ -31,18 +31,18 @@ main {
     align-content: flex-end;
     
     position:absolute;
-    width: 85%;
+    width: 75%;
     height: 800px;
     top: 50px;
     left: 200px;
+    flex-wrap: nowrap;
     
-    border: 1px solid red;
+    border: 2px solid #00000010;
 }
 
 #calendar > #mes {
     text-align: center;
 }
-
 #calendar > #dias, #semana{
     display: grid;
     grid-template-columns: repeat(7,1fr);
@@ -50,15 +50,21 @@ main {
 
     text-align: center;
 }
+#dias > .previous_day {
+    margin: 10px;
+    background-color: white;
+    color: gray;
+    
+}
 #dias > .day {
     margin: 10px;
-
-    border: 1px solid blue;
+    background-color: white;
+    color: blue;
     
 }
 #dias > .dayNow {
     margin: 10px;
-
-    border: 1px solid yellow;
+    background-color: white;
+    color: yellow;
     
 }
