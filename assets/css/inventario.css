@@ -17,7 +17,7 @@ body{
 }
 
 header{
-    background-color: blueviolet;
+    background-color: #8a2be2;
     padding: 25px 25px;
 
     grid-area: header;
@@ -30,7 +30,7 @@ header a{
     font-weight: bold;
     text-decoration: none;
 
-    color: white;
+    color: #ffffff;
 }
 
 .menu{
@@ -40,7 +40,7 @@ header a{
 }
 .menu img{
 	height: 30px;
-    color:white;
+    color: #ffffff;
     padding: 0px 7px;
 }
 .menu span{ 
@@ -50,10 +50,33 @@ header a{
 }
 
 .ficha{
-    
     grid-area: ficha;
+    
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+.vida img{
+    height: 2rem;
+    width: 2rem;
+}
+.xp{
+    margin-left: 2.9rem;
+    width: 15rem;
+    height: 0.9rem;
+    border-radius: 0.5rem;
+
+    background-color: #dddddd;
+}
+.xp div{
+    width: 70%;
+    height: 0.9rem;
+    border-radius: 0.5rem;
+
+    background-color: #4daf35;
 }
 .itens{
-    background-color: turquoise;
+    background-color: #40e0d0;
     grid-area: item;
 }
