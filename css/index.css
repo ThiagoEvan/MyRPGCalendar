@@ -28,7 +28,6 @@ footer {
     border-top: 3px solid black;
     color: white;
     text-align: center;
-    height: 10%;
 }
 
 #calendar {
@@ -84,6 +83,8 @@ footer {
 #modal {
     background: white;
     position: absolute;
+    
+    max-height: 90%;
 
     top: 0;
     bottom: 0;
@@ -109,44 +110,40 @@ footer {
     text-transform: uppercase;
 }
 
-#modal form {
+#modal .form {
     width: 80%;
-    max-width: 800px;
 
     margin: 0 auto;
-    
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
-.content form div:nth-child(1),
-.content form div:nth-child(4),
-.content form div:nth-child(5) {
+.content .form div:nth-child(1),
+.content .form div:nth-child(4),
+.content .form div:nth-child(5) {
     grid-column: span 2;
 }
 
-form input,
-form textarea {
+.form input,
+.form textarea {
     width: 100%;
     padding: 12px;
     border-radius: 6px;
     border: 1px solid rgba(39, 143, 70, 0.5);
     outline: none;
     font-size: 16px;
-
     box-sizing: border-box;
 }
 
-form label {
+.form label {
     font-weight: 600;
     line-height: 32px;
     letter-spacing: 0.8px;
 
 }
 
-form a {
+.form .cancel {
     background-color: #ffffff44;
-    color: white;
 
     display: flex;
     align-items: center;
@@ -160,19 +157,20 @@ form a {
     border-radius: 6px;
 
     font-size: 14px;
+    
     font-weight: bold;
 
     transition: 500ms;
 }
 
-form a:hover {
+.form .cancel:hover {
     background: white;
     color: #5A4FBE;
 
     text-decoration: none;
 }
 
-form button {
+.form .save {
     background: white;
 
     width: 150px;
@@ -181,17 +179,21 @@ form button {
     border-radius: 6px;
     cursor: pointer;
 
+    font-weight: bold;
+    
     margin-top: 32px;
 
     grid-column: 2;
     justify-self: end;
 }
 
-form button:hover {
-    background-color: #ffffff44;
-    color: white;
-
+.form .save:hover {
+    background-color: #ffffff10;
+    color: blue;
+    
     text-decoration: none;
+    
+    transition: 500ms;
 }
 
 #modal.hide {

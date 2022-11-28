@@ -29,42 +29,41 @@
             </div>
             <div id="modal" class="hide">
                 <div class="content">
-                    <h1>Novo Tarefa</h1>
+                    <h1>Nova Tarefa</h1>
         
-                    <form name="form-tarefa" action="">
+                    <div class="form">
                         
                         <div class="input-wrapper">
                             <label for="name">Nome da Tarefa</label>
-                            <input type="text" name="name">
+                            <input type="text" name="name" id="name">
                         </div>
         
                         <div class="input-wrapper">
                             <label for="date">Data</label>
-                            <input type="date" name="date">
+                            <input type="date" name="date" id="date">
                         </div>
         
                         <div class="input-wrapper">
                             <label for="time">Horario</label>
-                            <input type="time" name="time">
+                            <input type="time" name="time" id="time">
                         </div>
 
                         <div class="input-wrapper">
                             <label for="local">Local</label>
-                            <input type="" name="local">
+                            <input type="text" name="local" id="local">
                         </div>
         
                         <div class="input-wrapper">
                             <label for="description">Descriçao da tarefa</label>
-                            <textarea name="description" cols="30" rows="10"></textarea>
+                            <textarea name="description" id="description" cols="30" rows="10"></textarea>
                         </div>
-        
-                        <a href="#" onclick="onOff()">Voltar</a>
-                        <button class="button">Salvar</button>
-                    </form>
+                        <button class="cancel">Voltar</button>
+                        <button class="save">Salvar</button>
+                    </div>
                 </div>
             </div>
         </main>
-        <footer></footer>
+        <!--<footer><h3>&copy;MyRPGCalendar</h3></footer>-->
     </div>
 </body>
 <script src="js/index.js"></script>
