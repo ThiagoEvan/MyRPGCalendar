@@ -62,35 +62,41 @@ header a{
     flex-direction: column;
     align-items: center;
 
-    background-color: #91b887;
-
+    background-color: whitesmoke;
+}
+.ficha span{
+    margin-top: 2rem;
 }
 .ficha img{
     height: 10rem;
     width: 10rem;
 
-    border-radius: 15px;
+    border-radius: 5px;
+    margin-top: 2rem;
 }
-.xp{
-    width: 15rem;
+.nivel{
+    margin-top: 3rem;
+
+    margin-top: 0.5rem;
+}
+.barra{
+    width: 11rem;
     height: 0.9rem;
     border-radius: 0.5rem;
 
     background-color: #dddddd;
 }
-.xp div{
+.barra div{
     width: 70%;
     height: 0.9rem;
     border-radius: 0.5rem;
 
     background-color: #4daf35;
+    
 }
-.inventario{
+#inv{
     background-color: #40e0d0;
     grid-area: item;
     display: none;
-}
-.mercado{
-    background-color: brown;
-
+    
 }
