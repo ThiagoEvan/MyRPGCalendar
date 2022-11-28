@@ -28,16 +28,17 @@ function storeAccount(){
     let usuario = document.querySelectorAll("input")[2].value;
     let email = document.querySelectorAll("input")[3].value;
     let senha = document.querySelectorAll("input")[4].value;
-    
-    console.log(usuario, email, senha);
+    if (usuario !== null && senha !== null && email !== null && usuario !== "" && senha !== "" && email !== ""){
+        console.log(usuario, email, senha);
 
-    document.querySelectorAll("input")[2].value = "";
-    document.querySelectorAll("input")[3].value = "";
-    document.querySelectorAll("input")[4].value = "";
+        document.querySelectorAll("input")[2].value = "";
+        document.querySelectorAll("input")[3].value = "";
+        document.querySelectorAll("input")[4].value = "";
 
-    localStorage.setItem(usuario, senha)
-    x.style.display = "none";
-    y.style.display = "flex";
+        localStorage.setItem(usuario, senha);
+        x.style.display = "none";
+        y.style.display = "flex";
+    }
 }
 
 function logar(){
@@ -54,7 +55,7 @@ function logar(){
         document.querySelectorAll("input")[1].value = "";
         document.getElementById("confirma-login").innerHTML = "Logado com sucesso!"
         sleep(100)
-        window.location.href = "./index.html";
+        //window.location.href = "./index.html";
     } else {
         document.querySelectorAll("input")[0].value = "";
         document.querySelectorAll("input")[1].value = "";
@@ -63,3 +64,5 @@ function logar(){
     
 
 }
+
+localStorage.removeItem("")

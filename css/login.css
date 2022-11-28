@@ -137,3 +137,12 @@ label, input{
     margin: 20px;
     text-align: center;
 }
+
+.titulo{
+    color: #FFFFFF;
+    font-family: 'Sono', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
