@@ -2,7 +2,7 @@ var calendarDays = document.getElementById("dias")
 var calendarMonth = document.getElementById("mes")
 var date = new Date()
 var year = date.getFullYear()
-
+var task = []
 
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", 	"December"];
 var month = date.getMonth() + 1
@@ -114,6 +114,9 @@ function setTask(day){
 		}
 	}
 }
+function reset() {
+	date = new Date()
+}
 
 function init() {
 	getMonth()
@@ -121,7 +124,5 @@ function init() {
 	generateDays()
 	nextMonth()
 }
-function reset() {
-	date = new Date()
-}
+
 init()
