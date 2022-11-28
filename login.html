@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Entrar no MyRPGCalendar</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <script src="./assets/js/login.js"></script>
 </head>
 <body>
-    
+    <div class="container">
+        <div action="/index.html" class="login-box">
+            <p class="titulo">MyRPGCalendar</p>
+            <label for="userlog" class="lblLogin">Digite o seu usuário</label>
+            <input type="text" name="userlog" class="input">
+            <label for="userlog" class="lblLogin">Digite a sua senha</label>
+            <input type="password" name="senhalog" class="input">
+            <div class="botaodiv">
+                <p id="confirma-login"></p>
+                <button type="submit" class="botao" onclick="logar()">Entrar</button>
+            </div>
+        </div>
+        <div class="registro">
+            <button class="botao" id="a" href="" onclick="toglepop()">Não tem conta?</button>
+        </div>
+    </div>
+    <div class="container-pop">
+        <div class="login-box">
+            <p class="titulo">MyRPGCalendar</p>
+            <label for="userlog" class="lblLogin">Cadastre o seu usuário</label>
+            <input type="text" name="userlog" class="input">
+            <label for="userlog" class="lblLogin">Cadastre o seu email</label>
+            <input type="email" name="emaillog" class="input">
+            <label for="userlog" class="lblLogin">Cadastre a sua senha</label>
+            <input type="password" name="senhalog" class="input">
+            <div class="botaodiv">
+                <button type="submit" class="botao" onclick="storeAccount()">Cadastrar</button>
+            </div>
+        </div>
+        <div class="registro">            
+            <button class="botao" id="a" href="" onclick="toglepop()">Voltar ao login?</button>
+        </div>
+    </div>
 </body>
 </html>
