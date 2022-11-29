@@ -4,9 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
     <title>Agenda</title>
 </head>
 <body>
-    
+    <div id="container">
+        <header>
+            <a class="logo" href="index.html">MyRPGCalendar</a>
+
+            <div class=menu>
+                <div class="config">
+                    <button class="getTask">T</button>
+                </div>
+                <a href="inventario.html" class="inventario" ><img src="assets/images/mochila.svg" alt="inventario "></a>
+                <a href="inventario.html" class="mercados"><img src="assets/images/shopping-cart.svg" alt="mercado"></a>
+
+                <span>000</span>
+
+            </div>
+        </header>
+
+        <section class="ficha">
+            
+            <Span>Nome </Span>
+
+            <img src="./assets/images/imagem.png" alt="Imagem Personagem">
+
+            
+            <div class="nivel">
+                
+                <p>Nivel: 2</p>
+
+                <div class="barra"> 
+                    <div class="bar"> </div>
+                </div>
+            
+            </div>
+        </section>
+        <main id="calendar">
+            <div id="mes">
+            </div>
+            <div id="semana">
+                <h3>Domingo</h3>
+                <h3>Segunda</h3>
+                <h3>Terça</h3>
+                <h3>Quarta</h3>
+                <h3>Quinta</h3>
+                <h3>Sexta</h3>
+                <h3>Sabado</h3>
+            </div>
+            <div id="dias">
+            </div>
+        </main>
+        <section id="modal">
+            <div id="modal-setTask" class="hide">
+                <div class="content">
+                    <h1>Nova Tarefa</h1>
+        
+                    <div class="form">
+                        
+                        <div class="input-wrapper">
+                            <label for="name">Nome da Tarefa</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+        
+                        <div class="input-wrapper">
+                            <label for="date">Data</label>
+                            <input type="date" name="date" id="date">
+                        </div>
+        
+                        <div class="input-wrapper">
+                            <label for="time">Horario</label>
+                            <input type="time" name="time" id="time">
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="local">Local</label>
+                            <input type="text" name="local" id="local">
+                        </div>
+        
+                        <div class="input-wrapper">
+                            <label for="description">Descriçao da tarefa</label>
+                            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                        </div>
+                        <button class="cancel">Voltar</button>
+                        <button class="save">Salvar</button>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-getTask" class="hide">
+                <div class="content">
+                    <button class="close">X</button>
+                    <main>
+                    </main>
+                    <section class="buttons-task">
+                        <button class="xp-add" onclick="addXp()">Tarefa Concluida</button>
+                        <button class="life-remove" onclick="removeLife()">Tarefa Perdida</button>
+                    </section>
+                    
+                </div>
+            </div>
+        </section>
+        <footer><h3>&copy;MyRPGCalendar</h3></footer>
+    </div>
 </body>
+<script src="./assets/js/index.js"></script>
 </html>
