@@ -49,7 +49,7 @@ const items = [
     }
 ]
 
-function InicializarLoja(){
+function Loja(){
     var containerMer = document.getElementById('mer');
     
     var divRoupa = `
@@ -58,6 +58,7 @@ function InicializarLoja(){
     `;
 
     var divArma = `
+
     <h2> Armas </h2>
     <div class="arma">
     `;
@@ -70,7 +71,7 @@ function InicializarLoja(){
                 <img src="./assets/images/`+produto.img+`"/>
                 <span>`+produto.nome+`</span>
                 <p>Preço:`+produto.preco+`</p>
-                <button key="`+produto.id+`"> Comprar </button> 
+                <button key="`+produto.id+`" class="compra"> Comprar </button> 
             </div>
 
         `
@@ -92,10 +93,11 @@ function InicializarLoja(){
         divRoupa += '</div>'; 
 
     containerMer.innerHTML += divArma + divRoupa
+
 }
 
 
-function atualizarInv(){
+function Inventario(){
 
     var containerInv = document.getElementById('inv');
 
@@ -118,7 +120,6 @@ function atualizarInv(){
             <div class="produto">
                 <img src="./assets/images/`+produto.img+`"/>
                 <span>`+produto.nome+`</span>
-                <p>Preço:`+produto.preco+`</p>
                 <span>quantidade:`+produto.quantidade+` </span>
             </div>
 
@@ -130,7 +131,6 @@ function atualizarInv(){
             <div class="produto">
                 <img src="./assets/images/`+produto.img+`"/>
                 <span>`+produto.nome+`</span>
-                <p>Preço:`+produto.preco+`</p>
                 <span>quantidade:`+produto.quantidade+` </span>
             </div>
         `
@@ -139,14 +139,14 @@ function atualizarInv(){
         divArma += '</div>';
         divRoupa += '</div>'; 
 
-    containerInv.innerHTML += divArma + divRoupa;
-
+    containerInv.innerHTML +=  divArma + divRoupa
 }
 
-atualizarInv();
-InicializarLoja();
+Inventario();
+Loja();
 
-var links = document.getElementsByTagName("button")
+
+var links = document.getElementsByClassName("compra")
 
 for (let i = 0; i < links.length; i++) {
 
@@ -156,28 +156,21 @@ for (let i = 0; i < links.length; i++) {
     
         items[key].quantidade++;
     
-        atualizarInv();
+        Inventario();
+        alert("Compra feita!!")
     
         return false;
     })
 }
 
+var b = document.querySelector(".mercados")
 
-// function troca()
-// var botao = document.getElementsByTagName("a")
-// var inv = "inv";
+b.addEventListener("click",function(){
+    document.querySelector('#mer').classList.toggle("hide")
+})
 
-// botao.addEventListener("click", function(){
-//     inv = "mer";
-//     return inv;
-// })
-
-// if(inv == "mer"){
-
-//     InicializarLoja()
-// }if( inv == "inv"){
-
-//     atualizarInv()
-// }
-
+var inv = document.querySelector(".inventario")
+inv.addEventListener("click",function(){
+    document.querySelector("#mer").classList.toggle("hide")
+})
 

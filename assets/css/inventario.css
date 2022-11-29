@@ -95,9 +95,18 @@ header a{
     background-color: #4daf35;
     
 }
-#inv, #mer{
+#inv {
     grid-area: item;
-    
+}
+
+#mer{
+    grid-area: item;  
+    background-color: white;
+}
+#mer.hide {
+    opacity: 100%;
+    visibility: hidden;
+    background-color: red;
 }
 
 .arma, .roupa{
@@ -166,3 +175,4 @@ box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
     inset -4px -4px 6px 0 rgba(255,255,255,.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
+
