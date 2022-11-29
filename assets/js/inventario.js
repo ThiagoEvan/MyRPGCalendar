@@ -2,31 +2,31 @@ const items = [
     {
         id: 0,
         nome: "armadura couro",
-        img: "img.jpg",
+        img: "armadura couro.png",
         preco: 20,
         tipo: "roupa",
         quantidade: 0
     },
     {
         id: 1,
-        nome: "armadura ouro",
-        img: "img.jpg",
-        tipo: "roupa",
-        preco: 30,
-        quantidade: 0
-    },
-    {
-        id: 2,
         nome: "armadura ferro",
-        img: "img.jpg",
+        img: "armadura ferro.png",
         preco: 25,
         tipo: "roupa",
         quantidade: 0
     },
     {
+        id: 2,nome: "armadura ouro",
+        img: "armadura ouro.png",
+        tipo: "roupa",
+        preco: 30,
+        quantidade: 0
+        
+    },
+    {
         id: 3,
         nome: "espada madeira",
-        img: "img.jpg",
+        img: "espada madeira.png",
         preco: 20,
         tipo: "arma",
         quantidade: 0
@@ -34,7 +34,7 @@ const items = [
     {
         id: 4,
         nome: "armadura ferro",
-        img: "img.jpg",
+        img: "espada ferro.png",
         preco: 30,
         tipo: "arma",
         quantidade: 0
@@ -42,7 +42,7 @@ const items = [
     {
         id: 5,
         nome: "armadura ouro",
-        img: "img.jpg",
+        img: "espada ouro.png",
         preco: 25,
         tipo: "arma",
         quantidade: 0
@@ -51,39 +51,104 @@ const items = [
 
 function InicializarLoja(){
     var containerMer = document.getElementById('mer');
+    
+    var divRoupa = `
+    <h2> Roupas </h2>
+    <div class="roupa">
+    `;
+
+    var divArma = `
+    <h2> Armas </h2>
+    <div class="arma">
+    `;
 
     items.map(function(produto){
-        containerMer.innerHTML += ` 
 
+        if (produto.tipo == 'arma') {
+            divArma += ` 
             <div class="produto">
-                <img src="./images/`+produto.img+`"/>
+                <img src="./assets/images/`+produto.img+`"/>
                 <span>`+produto.nome+`</span>
-                <a key="`+produto.id+`" href="#"> Comprar </a> 
+                <p>Preço:`+produto.preco+`</p>
+                <button key="`+produto.id+`"> Comprar </button> 
             </div>
+
         `
-    }) 
+        }
+        if (produto.tipo =='roupa'){
+
+            divRoupa += ` 
+            <div class="produto">
+                <img src="./assets/images/`+produto.img+`"/>
+                <span>`+produto.nome+`</span>
+                <p>Preço:`+produto.preco+`</p>
+                <button key="`+produto.id+`"> Comprar </button> 
+            </div>
+
+        `
+        }}) 
+
+        divArma += '</div>';
+        divRoupa += '</div>'; 
+
+    containerMer.innerHTML += divArma + divRoupa
 }
-InicializarLoja();
+
 
 function atualizarInv(){
-    var containerMer = document.getElementById('inv');
+
+    var containerInv = document.getElementById('inv');
+
+    containerInv.innerHTML = "";
+
+    var divRoupa = `
+    <h2> Roupas </h2>
+    <div class="roupa">
+    `;
+
+    var divArma = `
+    <h2> Armas </h2>
+    <div class="arma">
+    `;
 
     items.map(function(produto){
-        containerMer.innerHTML += ` 
 
+        if (produto.tipo == 'arma') {
+            divArma += ` 
             <div class="produto">
-                <img src="./images/`+produto.img+`"/>
+                <img src="./assets/images/`+produto.img+`"/>
                 <span>`+produto.nome+`</span>
-                
+                <p>Preço:`+produto.preco+`</p>
+                <span>quantidade:`+produto.quantidade+` </span>
+            </div>
+
+        `
+        }
+        if (produto.tipo =='roupa'){
+
+            divRoupa += ` 
+            <div class="produto">
+                <img src="./assets/images/`+produto.img+`"/>
+                <span>`+produto.nome+`</span>
+                <p>Preço:`+produto.preco+`</p>
+                <span>quantidade:`+produto.quantidade+` </span>
             </div>
         `
-    })
+        }}) 
+
+        divArma += '</div>';
+        divRoupa += '</div>'; 
+
+    containerInv.innerHTML += divArma + divRoupa;
 
 }
 
-var links = document.getElementsByTagName("a")
+atualizarInv();
+InicializarLoja();
 
-for (var i = 0; i < links.length; i++) {
+var links = document.getElementsByTagName("button")
+
+for (let i = 0; i < links.length; i++) {
 
     links[i].addEventListener("click", function(){
     
@@ -96,3 +161,23 @@ for (var i = 0; i < links.length; i++) {
         return false;
     })
 }
+
+
+// function troca()
+// var botao = document.getElementsByTagName("a")
+// var inv = "inv";
+
+// botao.addEventListener("click", function(){
+//     inv = "mer";
+//     return inv;
+// })
+
+// if(inv == "mer"){
+
+//     InicializarLoja()
+// }if( inv == "inv"){
+
+//     atualizarInv()
+// }
+
+

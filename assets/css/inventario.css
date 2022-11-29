@@ -7,7 +7,7 @@ body{
     
 }
 #container{
-    position:fixed;
+
     left: 0;
     bottom: 0;
     right: 0;
@@ -15,10 +15,11 @@ body{
 
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: 1fr 6.5fr;
     grid-template-areas: 
         'header header '
         'ficha item '
+
     ;
 }
 
@@ -94,9 +95,74 @@ header a{
     background-color: #4daf35;
     
 }
-#inv{
-    background-color: #40e0d0;
+#inv, #mer{
     grid-area: item;
-    display: none;
     
+}
+
+.arma, .roupa{
+    
+    display: flex;
+    
+}
+
+
+.produto img{
+    height: 8rem;
+    width: 8rem;
+
+    padding: 0.3rem;
+    background-color: #eee;
+
+    border-radius: 0.4rem;
+
+}
+
+.produto{
+    width: 10rem;
+    height: 14rem;
+
+    text-align: center;
+    
+    margin: 1rem;
+    padding: 0.5rem 0.2rem;
+    border-color: #cdcdcd; 
+    border-style: solid;  
+    border-radius: 5px;
+
+
+}
+.produto p{
+    margin: 0.2rem;
+}
+h2{
+    margin: 0.5rem;
+}
+button{
+    width: 6rem;
+    height: 1.5rem;
+
+    margin-top: 0.3rem;
+
+    color: #8a2be2;
+    font-size: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: transparent;
+
+    border-radius: 2rem;
+    border-color: #8a2be2;
+    border-style: none;
+}
+
+button:hover {
+background: #8a2be2;
+color: #fff;
+}
+
+button:active{
+box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+            -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
