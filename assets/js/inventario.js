@@ -33,7 +33,7 @@ const items = [
     },
     {
         id: 4,
-        nome: "armadura ferro",
+        nome: "espada ferro",
         img: "espada ferro.png",
         preco: 30,
         tipo: "arma",
@@ -41,7 +41,7 @@ const items = [
     },
     {
         id: 5,
-        nome: "armadura ouro",
+        nome: "espada ouro",
         img: "espada ouro.png",
         preco: 25,
         tipo: "arma",
