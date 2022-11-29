@@ -5,32 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/global.css">
     <title>Agenda</title>
 </head>
 <body>
     <div id="container">
-        <header></header>
-        <section>Personagem</section>
-        <main>
-            <div id="calendar">
-                <div id="mes">
-                </div>
-                <div id="semana">
-                    <h3>Domingo</h3>
-                    <h3>Segunda</h3>
-                    <h3>Terça</h3>
-                    <h3>Quarta</h3>
-                    <h3>Quinta</h3>
-                    <h3>Sexta</h3>
-                    <h3>Sabado</h3>
-                </div>
-                <div id="dias">
-                </div>
+        <header>
+            <div class="config">
+                <button class="getTask">T</button>
             </div>
-            
+        </header>
+        <section>Personagem</section>
+        <main id="calendar">
+            <div id="mes">
+            </div>
+            <div id="semana">
+                <h3>Domingo</h3>
+                <h3>Segunda</h3>
+                <h3>Terça</h3>
+                <h3>Quarta</h3>
+                <h3>Quinta</h3>
+                <h3>Sexta</h3>
+                <h3>Sabado</h3>
+            </div>
+            <div id="dias">
+            </div>
         </main>
-        <section>
-            <div id="modal" class="hide">
+        <section id="modal">
+            <div id="modal-setTask" class="hide">
                 <div class="content">
                     <h1>Nova Tarefa</h1>
         
@@ -65,9 +67,16 @@
                     </div>
                 </div>
             </div>
+            <div id="modal-getTask" class="hide">
+                <div class="content">
+                    <main>
+                        teste
+                    </main>
+                     <button class="close">X</button>
+                </div>
+            </div>
         </section>
-        <!--<footer><h3>&copy;MyRPGCalendar</h3></footer>-->
-        
+        <footer><h3>&copy;MyRPGCalendar</h3></footer>
     </div>
 </body>
 <script src="js/index.js"></script>

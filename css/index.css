@@ -4,16 +4,33 @@ body {
 }
 
 #container {
+    height: 100%;
     display: grid;
     gap: 10px;
 
 }
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 3;
 
     position:absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 50px;
+}
+.config {
+    grid-column: 3;
+    text-align: end;
+    align-content: center;
+}
+.config button {
+    width: 10%;
+    height: 60%;
+    border-radius: 90%;
+
+    color: white;
+    background-color: blueviolet;
 }
 main {
     display: flex;
@@ -79,8 +96,14 @@ footer {
     color: gray;
 }
 
-/*MODAL Style*/
-#modal {
+
+#modal section {
+    max-height: 100%;
+    margin-bottom: 10%;
+}
+
+/*MODAL create task Style*/
+#modal-setTask {
     background: white;
     position: absolute;
     
@@ -97,20 +120,18 @@ footer {
     transition: 500ms;
 }
 
-#modal.addScroll {
+#modal-setTask.addScroll {
     overflow: auto;
 }
-
-#modal .content {
+#modal-setTask .content {
     margin: 32px 0;
     color: rgb(65, 62, 62);
 }
-#modal .content h1 {
+#modal-setTask .content h1 {
     text-align: center;
     text-transform: uppercase;
 }
-
-#modal .form {
+#modal-setTask .form {
     width: 80%;
 
     margin: 0 auto;
@@ -196,7 +217,42 @@ footer {
     transition: 500ms;
 }
 
-#modal.hide {
+#modal-setTask.hide {
+    opacity: 100%;
+    visibility: hidden;
+}
+
+/*MODAL get task Style*/
+#modal-getTask {
+    background: white;
+    position: fixed;
+    
+    max-height: 90%;
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    justify-content: center;
+
+    transition: 500ms;
+}
+#modal-getTask.addScroll {
+    overflow: auto;
+}
+#modal-getTask .content {
+    display: grid;
+    grid-template-column: 1;
+    grid-template-rows: 2;
+    color: rgb(65, 62, 62);
+}
+#modal-getTask main {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
+#modal-getTask.hide {
     opacity: 100%;
     visibility: hidden;
 }

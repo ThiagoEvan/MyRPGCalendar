@@ -78,7 +78,7 @@ function nextMonth(){
 //Mostrar tarefa
 calendarDays.addEventListener("click",function(){
     document
-    .getElementById("modal")
+    .getElementById("modal-setTask")
     .classList
     .toggle("hide")
 })
@@ -90,30 +90,51 @@ document.querySelector(".save").addEventListener("click", function () {
     let ftime = document.getElementById("time").value
     let flocal = document.getElementById("local").value
     let fdesc = document.getElementById("description").value
-	setTask(fdate.slice(8))
-	document.getElementById("modal").classList.toggle("hide")
+	setTask(fname,fdate,ftime,flocal,fdesc)
+	document.getElementById("modal-setTask").classList.toggle("hide")
 })
 
 //cancelar tarefa
 document.querySelector(".cancel").addEventListener("click",function() {
 	    document
-    .getElementById("modal")
+    .getElementById("modal-setTask")
     .classList
     .toggle("hide")
 })
 
 //Colocar tarefa no calendario
-function setTask(day){
+function setTask(name,date,time,local,desc){
 	var days = document.querySelectorAll("div.day")
-	if (day < 10){
-		day = day.toString().slice(1)
+	if (date < 10){
+		date = date.toString().slice(1)
 	}
 	for(var i = 0;i <= days.length - 1;i++){
-		if(day.toString() == days[i].innerHTML){
+		if(date.toString().slice(8) == days[i].innerHTML){
 			days[i].style.backgroundColor = "cyan"
+			days[i].classList.add(`evento-${i}`)
 		}
 	}
+	getTask(name,date,time,local,desc)
 }
+function getTask(name,date,time,local,desc) {
+	var create = document.querySelector("#modal-getTask .content main")
+	create.insertAdjacentHTML("beforeend","<h5>Evento</h5>")
+	create.insertAdjacentHTML("beforeend",`<p>Nome:${name}</p>`)
+	create.insertAdjacentHTML("beforeend",`<p>Dia:${date}</p>`)
+	create.insertAdjacentHTML("beforeend",`<p>Horario:${time}</p>`)
+	create.insertAdjacentHTML("beforeend",`<p>Local:${local}</p>`)
+	create.insertAdjacentHTML("beforeend",`<p>Descrição:${desc}</p>`)
+}
+
+//Botoes de mostar as tarefas
+document.querySelector("button.getTask").addEventListener("click",function (){
+	document.getElementById("modal-getTask").classList.toggle("hide")
+})
+document.querySelector("button.close").addEventListener("click", function() {
+	document.getElementById("modal-getTask").classList.toggle("hide")
+})
+
+
 function reset() {
 	date = new Date()
 }
