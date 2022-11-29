@@ -15,7 +15,23 @@
                 <button class="getTask">T</button>
             </div>
         </header>
-        <section>Personagem</section>
+        <section class="ficha">
+            
+            <Span>Nome </Span>
+
+            <img src="./assets/images/imagem.png" alt="Imagem Personagem">
+
+            
+            <div class="nivel">
+                
+                <p>Nivel: 2</p>
+
+                <div class="barra"> 
+                    <div class="bar"> </div>
+                </div>
+            
+            </div>
+        </section>
         <main id="calendar">
             <div id="mes">
             </div>
@@ -69,10 +85,14 @@
             </div>
             <div id="modal-getTask" class="hide">
                 <div class="content">
+                    <button class="close">X</button>
                     <main>
-                        teste
                     </main>
-                     <button class="close">X</button>
+                    <section class="buttons-task">
+                        <button class="xp-add" onclick="addXp()">Tarefa Concluida</button>
+                        <button class="life-remove" onclick="removeLife()">Tarefa Perdida</button>
+                    </section>
+                    
                 </div>
             </div>
         </section>

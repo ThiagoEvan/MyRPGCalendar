@@ -118,7 +118,8 @@ function setTask(name,date,time,local,desc){
 }
 function getTask(name,date,time,local,desc) {
 	var create = document.querySelector("#modal-getTask .content main")
-	create.insertAdjacentHTML("beforeend","<h5>Evento</h5>")
+	create.insertAdjacentHTML("beforeend","<h3>Evento</h3>")
+	create.insertAdjacentHTML("beforeend","<button class='addBar>+</button>")
 	create.insertAdjacentHTML("beforeend",`<p>Nome:${name}</p>`)
 	create.insertAdjacentHTML("beforeend",`<p>Dia:${date}</p>`)
 	create.insertAdjacentHTML("beforeend",`<p>Horario:${time}</p>`)
@@ -134,7 +135,20 @@ document.querySelector("button.close").addEventListener("click", function() {
 	document.getElementById("modal-getTask").classList.toggle("hide")
 })
 
+let width = document.querySelector(".bar").style.width = "70%"
+function addXp(){
+	width = document.querySelector(".bar").style.width.slice(0,2)
+	width = parseInt(width)
+	width += 10
+	if(width == 100) {
+		width = 0
+	}
+	document.querySelector(".bar").style.width = `${width}%`
+}
 
+function removeLife(){
+
+}
 function reset() {
 	date = new Date()
 }
