@@ -1,7 +1,3 @@
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 function toglepop() {
     var x = document.getElementsByClassName("container-pop");
     x = x[0];
@@ -42,9 +38,13 @@ function storeAccount(){
             localStorage.setItem(usuario, JSON.stringify(arr));
             x.style.display = "none";
             y.style.display = "flex";
+        }else{
+            document.getElementById("confirma-registro").innerHTML = "Esse nome de usuário já está em uso!!";
         }
-        document.getElementById("confirma-registro").innerHTML = "Esse nome de usuário já está em uso!!"
+    }else{
+        document.getElementById("confirma-registro").innerHTML = "Preencha os campos para criar um login!!"
     }
+    
 }
 
 function logar(){
@@ -62,7 +62,6 @@ function logar(){
         document.querySelectorAll("input")[0].value = "";
         document.querySelectorAll("input")[1].value = "";
         document.getElementById("confirma-login").innerHTML = "Logado com sucesso!"
-        sleep(200)
         window.location.href = "./index.html";
     } else {
         document.querySelectorAll("input")[0].value = "";
@@ -72,5 +71,3 @@ function logar(){
     
 
 }
-
-localStorage.removeItem("")
