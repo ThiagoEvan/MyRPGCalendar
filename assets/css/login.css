@@ -122,13 +122,13 @@ label, input{
     align-items: center;
     min-width: 300px;
     max-width: 25vw;
-    top: 23vh;
+    top: 21vh;
     margin: auto;
     padding: 30px;
     border: 1px solid #FFFFFF;
 }
 
-#confirma-login{
+#confirma-login, #confirma-registro{
     text-decoration: none;
     color: #FFFFFF;
     font-family: 'Sono', sans-serif;
