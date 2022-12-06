@@ -90,6 +90,7 @@ document.querySelector(".save").addEventListener("click", function () {
     let ftime = document.getElementById("time").value
     let flocal = document.getElementById("local").value
     let fdesc = document.getElementById("description").value
+	let arr = []
 	setTask(fname,fdate,ftime,flocal,fdesc)
 	document.getElementById("modal-setTask").classList.toggle("hide")
 })
